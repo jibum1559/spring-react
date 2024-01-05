@@ -2,7 +2,7 @@
 import React from 'react';
 import NaverLogin from 'react-naver-login';
 
-const NaverApp = () => {
+const NaverLoginFontend = () => {
   const clientId = '8aA9mcsqN8544S_2bNZN';
   const NaverLoginSuccess = (res) => {
     console.log(res);
@@ -13,7 +13,7 @@ const NaverApp = () => {
   return (
     <NaverLogin
       clientId={clientId}
-      callbackUrl="http://localhost:3000/naverLogin"
+      callbackUrl="http://localhost:3000/login/oauth2/code/naver"
       onSuccess={NaverLoginSuccess}
       onFailure={NaverLoginFailure}
       render={(props) => (
@@ -23,4 +23,4 @@ const NaverApp = () => {
     />
   );
 };
-export default NaverApp;
+export default NaverLoginFontend;

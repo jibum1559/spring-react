@@ -1,12 +1,14 @@
 import GoogleApp from './component/GoogleApp';
 import KakaoApp from './component/KakaoApp';
-import NaverApp from './component/NaverApp';
+import NaverLoginFontend from './component/NaverLoginFronend';
+import NaverLoginButton from './component/NaverLoginButtonBackend';
 const App = () => {
   return (
     <div>
-      {/* <GoogleApp /> */}
-      {/* <NaverApp /> */}
+      <GoogleApp />
       <KakaoApp />
+      <NaverLoginFontend />
+      <NaverLoginButton />
     </div>
   );
 };

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//myBatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kh.springchap4.mapper.MemberMapper">
+	<!-- 회원 등록 -->
+	<insert id="insertMember" parameterType="com.kh.springchap4.model.Member">
+		INSERT INTO Members (MEMBERID, USERNAME, PASSWORD, FULLNAME, EMAIL, REGISTRATIONDATE)
+		VALUES(members_seq.NEXTVAL, #{username}, #{password}, #{fullname}, #{email}, sysdate) <!--#{registrationDate, jdbcType=DATE}  -->
+	</insert>
+	<select id="getAllMembers" parameterType="com.kh.springchap4.model.Member">
+		SELECT * FROM MEMBERS ORDER BY MEMBERID
+	</select>
+	<update id="updateMember" parameterType="com.kh.springchap4.model.Member">
+		UPDATE Members 
+		SET
+			  password = #{password}, 
+			  email = #{email}
+		WHERE memberid = #{memeberid}
+	</update>
+</mapper>

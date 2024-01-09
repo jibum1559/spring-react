@@ -43,7 +43,7 @@ public class ApiJsonController {
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String line; //하나씩 값을 넣을 때
             while ((line = reader.readLine()) != null) {
-                result.append(line);
+                result.append(line); 
             }
             reader.close();
             connection.disconnect();

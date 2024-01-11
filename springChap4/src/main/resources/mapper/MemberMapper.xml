@@ -14,6 +14,6 @@
 		SET
 			  password = #{password}, 
 			  email = #{email}
-		WHERE memberid = #{memeberid}
+		WHERE memberID = #{memeberID}
 	</update>
 </mapper>

@@ -15,5 +15,5 @@
 			  password = #{password}, 
 			  email = #{email}
 		WHERE memberID = #{memeberID}
-	</update>
+	</update>  
 </mapper>

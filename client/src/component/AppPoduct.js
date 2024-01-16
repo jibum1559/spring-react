@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/item')
+      .get('http://localhost:8081/api/item')
       .then((response) => {
         setProducts(response.data);
       })
@@ -20,7 +20,7 @@ const App = () => {
 
   const handleAddProduct = () => {
     axios
-      .post('http://localhost:8080/api/add', newProduct)
+      .post('http://localhost:8081/api/add', newProduct)
       .then((response) => {
         setProducts((prevProducts) => [...prevProducts, response.data]);
         setNewProduct({ name: '', price: 0 });
@@ -37,7 +37,7 @@ const App = () => {
     }
 
     axios
-      .put(`http://localhost:8080/api/update/${editingProduct.id}`, newProduct)
+      .put(`http://localhost:8081/api/update/${editingProduct.id}`, newProduct)
       .then((response) => {
         setProducts((prevProducts) => {
           const updatedProducts = prevProducts.map((product) => {
@@ -60,7 +60,7 @@ const App = () => {
 
   const handleDeleteProduct = (id) => {
     axios
-      .delete(`http://localhost:8080/api/delete/${id}`)
+      .delete(`http://localhost:8081/api/delete/${id}`)
       .then((response) => {
         setProducts((prevProduct) =>
           // 현재 목록에서 삭제할 제품을 제외하고 새로운 배열을 생성

@@ -19,7 +19,7 @@ import com.kh.springchap1.repository.ProductRepository;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins="http://localhost:3000", 
+@CrossOrigin(origins="http://localhost:3001", 
 						allowCredentials="true",
 						allowedHeaders="*")
 public class ProductController {
